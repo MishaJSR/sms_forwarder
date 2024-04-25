@@ -12,6 +12,10 @@ def filter_message(text):
         return True
     elif 'закрытие с выдачей наличных' in text.lower():
         return True
+    elif 'карта заблокирована' in text.lower():
+        return True
+    elif 'подтверждение номера телефона' in text.lower():
+        return True
     elif 'подтвердите обслуживание в офисе. введите код' in text.lower() and \
             'на устройстве сотрудника. никому его не сообщайте' in text.lower():
         return True
