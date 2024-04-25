@@ -25,4 +25,7 @@ def filter_message(text):
 @user_private_router.channel_post()
 async def message_in_group(message: types.Message):
     if filter_message(message.text):
-        await message.bot.send_message(chat_id=os.getenv('CHAT_ID_RESIEVER'), text=message.text)
+        await message.bot.send_message(chat_id=os.getenv('CHAT_ID_RESIEVER'), text='⚠⚠⚠' + message.text + '⚠⚠⚠')
+        await message.bot.send_message(chat_id=os.getenv('CHAT_ID_RESIEVER'), text='⚠⚠⚠' + message.text + '⚠⚠⚠')
+        await message.bot.send_message(chat_id=os.getenv('CHAT_ID_RESIEVER'), text='⚠⚠⚠' + message.text + '⚠⚠⚠')
+        await message.bot.send_message(chat_id=os.getenv('CHAT_ID_RESIEVER'), text='⚠⚠⚠' + message.text + '⚠⚠⚠')
