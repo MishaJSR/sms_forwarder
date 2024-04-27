@@ -1,12 +1,12 @@
 services:
   bot:
-    image: "bot_forwarder"
+    image: "bot_forwarder_my"
     stop_signal: SIGINT
     build:
       context: .
-    working_dir: "/usr/src/app/bot_forwarder"
+    working_dir: "/usr/src/app/bot_forwarder_my"
     volumes:
-      - .:/usr/src/app/bot
+      - .:/usr/src/app/bot_forwarder_my
     command: python3 -m bot
     restart: always
     env_file:
